@@ -46,9 +46,12 @@ class Person {
     this.age = age;
     this.stomach = [];
   }
-  eat(someFood){
-    if(this.stomach.length < 10) {
-      return this.stomach.push(someFood);
+    eat(someFood){
+      if(this.stomach.length < 10) {
+        this.stomach.push(someFood);
+      }
+    toString(){
+      return `${this.name}, ${this.age}`;
     }
   }
 }
@@ -198,7 +201,7 @@ class ProjectManager extends Instructor{
     this.favInstructor = obj.favInstructor;
   }
   standUp(channel){
-    return `${this.name} announces to ${channel}, achannel standy time!`;
+    return `${this.name} announces to ${channel}, @channel standy time!`;
   }
   debugsCode(student, subject){
     return `${this.name} debugs ${student.name} code on ${subject}`;
